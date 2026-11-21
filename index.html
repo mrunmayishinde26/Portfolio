@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mrunmayi Shinde — AI/ML & SDK Integration</title>
+  <meta name="description" content="Portfolio of Mrunmayi Shinde — MCA postgraduate in AI & ML, Technical Onboarding Specialist at CleverTap, builder of AI-powered tools and computer-vision projects.">
+  <meta name="theme-color" content="#0a0a18">
+  <meta property="og:title" content="Mrunmayi Shinde — AI/ML & SDK Integration">
+  <meta property="og:description" content="AI/ML postgraduate, CleverTap Technical Onboarding Specialist, deepfake-detection researcher and builder of AI tools.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" id="glow" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <div class="grid"></div>
+    <canvas id="net"></canvas>
+  </div>
+
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Home"><span class="logo-mark">M</span><span class="logo-text">mrunmayi<span class="dim">.ai</span></span></a>
+      <ul class="links" id="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="kbd" id="cmdBtn" aria-label="Open command palette"><span>⌘</span>K</button>
+        <button class="icon-btn" id="theme" aria-label="Toggle light / dark theme" title="Toggle theme"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="icon-btn menu-btn" id="menu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="chip"><i class="pulse"></i> Technical Onboarding Specialist · CleverTap</span>
+          <h1>Hi, I'm <span class="grad">Mrunmayi Shinde</span></h1>
+          <p class="roles"><span class="prompt">&gt;</span> <span id="typed"></span><span class="caret"></span></p>
+          <p class="lead">I connect <b>AI &amp; machine learning</b> with real products — helping teams integrate SDKs, debug the hard stuff, and building LLM-powered tools that turn a website into an analytics plan.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">View my work <span>→</span></a>
+            <a class="btn ghost" href="#research">Read my research</a>
+            <a class="btn ghost" href="#contact">Say hello</a>
+          </div>
+          <div class="tagline">
+            <p>I build AI that <span class="w w1">sees</span>, <span class="w w2">reasons</span> and <span class="w w3">ships</span>.</p>
+            <small>train <i>→</i> evaluate <i>→</i> integrate <i>→</i> ship</small>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+        <div class="float-chip glass fc1"><span>🧠</span> CNNs · <b>92.3%</b></div>
+        <div class="float-chip glass fc2"><span>⚡</span> LLM-powered tools</div>
+        <div class="float-chip glass fc3"><span>🔌</span> 6 SDK platforms</div>
+        <aside class="hero-card glass glow-border tilt" aria-label="Profile summary">
+          <div class="term-bar"><i></i><i></i><i></i><span>mrunmayi.profile.json</span></div>
+<pre id="profile" class="code" aria-label="Profile as JSON"></pre>
+        </aside>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+        <div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq"><span>Python</span><span>TensorFlow</span><span>OpenCV</span><span>Deep Learning</span><span>Computer Vision</span><span>LLMs</span><span>React</span><span>Node.js</span><span>CleverTap SDK</span><span>REST APIs</span><span>Explainable AI</span><span>Puppeteer</span><span>Flask</span><span>SQL</span></div></div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="sec-head reveal" data-n="01"><span class="eyebrow">// About</span><h2>Where AI meets <span class="grad">real-world integration</span></h2></header>
+        <div class="about-grid">
+          <article class="glass pad reveal">
+            <p>I'm a Computer Applications postgraduate with a strong background in <b>Artificial Intelligence, Machine Learning and software development</b>. My computer-vision experience spans convolutional neural networks, object detection and facial recognition, and I've published research on <b>deepfake detection</b>.</p>
+            <p>Today I work as a Technical Onboarding Specialist at CleverTap — supporting SDK integrations, troubleshooting technical issues and developing AI-powered solutions. I want to go deeper into machine learning, neural networks and <b>explainable AI</b> through advanced study and research.</p>
+          </article>
+          <div class="facts">
+            <div class="glass fact reveal"><span class="k">Based in</span><span class="v">Mumbai, India</span></div>
+            <div class="glass fact reveal"><span class="k">Currently</span><span class="v">Onboarding Specialist @ CleverTap</span></div>
+            <div class="glass fact reveal"><span class="k">Languages</span><span class="v">Marathi · English (C1/C2)</span></div>
+            <div class="glass fact reveal"><span class="k">Looking to</span><span class="v">Study ML, neural nets &amp; explainable AI</span></div>
+          </div>
+        </div>
+        <div class="bento">
+          <div class="glass reveal"><b class="num" data-count="6" data-dec="0">0</b><span>SDK platforms integrated for clients</span></div>
+          <div class="glass reveal"><b class="num" data-count="1" data-dec="0">0</b><span>Published research paper</span></div>
+          <div class="glass reveal"><b class="num" data-count="3" data-dec="0">0</b><span>AWS &amp; Google certifications</span></div>
+          <div class="glass reveal"><b class="num" data-count="4" data-dec="0">0</b><span>AI / vision projects built</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="sec-head reveal" data-n="02"><span class="eyebrow">// Experience</span><h2>Building at <span class="grad">CleverTap</span></h2></header>
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <span class="dot live"></span>
+            <div class="glass pad card-hover">
+              <div class="tl-top"><h3>Onboarding Specialist <small>(Technical Account Management)</small></h3><span class="date">Jul 2025 — Present</span></div>
+              <p class="org">CleverTap · Mumbai, India</p>
+              <ul class="ticks">
+                <li><b>SDK integration:</b> help international clients integrate CleverTap across Android, iOS, Web, React Native, Flutter and Cordova apps.</li>
+                <li><b>Technical troubleshooting:</b> resolve SDK, REST API, JSON and push-notification issues through debugging and root-cause analysis.</li>
+                <li><b>Data analytics:</b> event tracking, user profiles, customer segmentation and data validation to keep analytics accurate.</li>
+                <li><b>AI development:</b> built an AI-powered event-recommendation engine with React.js, Node.js, Puppeteer and LLMs to automate analytics planning.</li>
+                <li><b>Collaboration:</b> work with engineering and product teams to solve technical challenges and improve client integrations.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <span class="dot"></span>
+            <div class="glass pad card-hover">
+              <div class="tl-top"><h3>Onboarding Intern</h3><span class="date">Jan 2025 — Jul 2025</span></div>
+              <p class="org">CleverTap · Mumbai, India</p>
+              <ul class="ticks">
+                <li><b>Platform training:</b> hands-on with CleverTap's platform, SDKs and event tracking.</li>
+                <li><b>Technical learning:</b> API, SDK and data-integration fundamentals.</li>
+                <li><b>Client onboarding:</b> shadowed senior members on client calls to learn onboarding and troubleshooting.</li>
+                <li><b>Team collaboration:</b> integration workflows and client-support processes.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="sec-head reveal" data-n="03"><span class="eyebrow">// Projects</span><h2>Things I've <span class="grad">built</span></h2></header>
+
+        <article class="feature glass glow-border reveal" aria-labelledby="ere-title">
+          <div class="feature-copy">
+            <span class="chip small">★ Featured</span>
+            <h3 id="ere-title">AI-Powered Event Recommendation Engine</h3>
+            <p>Paste a website URL or drop an Android APK — the tool crawls or parses it, infers the business vertical and recommends the analytics events worth tracking. It uses LLMs (Claude, Groq, Gemini and OpenAI) to generate customised events with priorities and properties, <b>CleverTap SDK code</b>, <b>journey variants</b>, a <b>campaign playbook</b> and a Google-Sheets event design export.</p>
+            <ul class="mini">
+              <li>Puppeteer multi-page crawler and a static APK analyser (manifest, permissions, DEX &amp; resource strings)</li>
+              <li>Retrieval over previously trained apps (BM25) to keep recommendations consistent</li>
+              <li>Built for teams with limited technical resources planning their analytics</li>
+            </ul>
+            <div class="tags"><span>React</span><span>Node.js</span><span>Express</span><span>Puppeteer</span><span>LLMs</span><span>REST APIs</span></div>
+            <div class="cta">
+              <a class="btn primary" href="https://github.com/MrunmayiS2600/Events-Recommendation-CT" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+            </div>
+          </div>
+          <div class="shots">
+            <div class="shot-tabs" role="tablist" aria-label="Project screenshots">
+              <button role="tab" aria-selected="true" data-img="assets/projects/ere-results.png">Scan</button>
+              <button role="tab" aria-selected="false" data-img="assets/projects/ere-events.png">Events</button>
+              <button role="tab" aria-selected="false" data-img="assets/projects/ere-journeys.png">Journeys</button>
+              <button role="tab" aria-selected="false" data-img="assets/projects/ere-sdk.png">SDK code</button>
+            </div>
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span>localhost:3000</span><button type="button" id="expand" aria-label="Expand screenshot">⤢ expand</button></div>
+              <button class="shot-btn" type="button" id="shotBtn" aria-label="Open screenshot full size"><img id="shot" src="assets/projects/ere-results.png" alt="Event Recommendation Engine screenshot"></button>
+            </div>
+          </div>
+        </article>
+
+        <div class="proj-grid">
+          <article class="glass pad proj tilt reveal">
+            <div class="proj-ico">🧑‍💻</div>
+            <h3>Multi-Factor Banking Authentication</h3>
+            <p class="sub">Facial recognition</p>
+            <p>A banking login that needs both a password and a face match. Users register facial data at sign-up; the dashboard unlocks only after password and CNN-based verification pass.</p>
+            <div class="tags"><span>Python</span><span>Flask</span><span>CNNs</span><span>Computer Vision</span></div>
+            <a class="link" href="https://github.com/mrunmayishinde26/Multifactor-Authentication-System" target="_blank" rel="noopener">Source code ↗</a>
+          </article>
+          <article class="glass pad proj tilt reveal">
+            <div class="proj-ico">🎯</div>
+            <h3>Real-Time Object Detection</h3>
+            <p class="sub">YOLOv3</p>
+            <p>Detects and locates multiple objects in images and video using YOLOv3 with pretrained COCO weights, bounding boxes, confidence scores and Non-Maximum Suppression — served through Flask APIs.</p>
+            <div class="tags"><span>Python</span><span>TensorFlow</span><span>OpenCV</span><span>Flask</span></div>
+            <a class="link" href="https://github.com/mrunmayishinde26/Object-Detection-System" target="_blank" rel="noopener">Source code ↗</a>
+          </article>
+          <article class="glass pad proj tilt reveal">
+            <div class="proj-ico">🫁</div>
+            <h3>Lung Cancer Detection</h3>
+            <p class="sub">Deep learning for medical imaging</p>
+            <p>A CNN-based image classifier that tells normal from abnormal scans, covering image processing, feature extraction and supervised classification for computer-aided diagnosis.</p>
+            <div class="tags"><span>Python</span><span>CNNs</span><span>Deep Learning</span><span>Medical imaging</span></div>
+            <a class="link" href="https://github.com/mrunmayishinde26/Lung-Cancer-Detection" target="_blank" rel="noopener">Source code ↗</a>
+          </article>
+          <article class="glass pad proj tilt reveal">
+            <div class="proj-ico">🎨</div>
+            <h3>UI Tech</h3>
+            <p class="sub">Presented at Aavishkar Research Convention</p>
+            <p>Responsive, user-friendly web interfaces focused on usability and navigation. I also ran UI/UX design workshops for fellow students.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span></div>
+            <a class="link" href="https://github.com/mrunmayishinde26/UI-TECH" target="_blank" rel="noopener">Source code ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <div class="container">
+        <header class="sec-head reveal" data-n="04"><span class="eyebrow">// Research</span><h2>Published <span class="grad">research</span></h2></header>
+        <article class="glass pad paper reveal">
+          <div class="paper-top"><span class="chip small">2025 · IJRPR, Vol. 6, Issue 6, pp. 8247–8253</span></div>
+          <h3>Deep Fake AI Detection System: A Comprehensive Machine Learning Approach for Synthetic Media Identification</h3>
+          <p class="authors">Mrunmayi Shinde, Bhushan Gaonkar</p>
+          <p>A deepfake-detection system that combines CNNs with hybrid machine-learning models to spot facial inconsistencies, lighting changes and visual artifacts. Evaluated on the FaceForensics++, Celeb-DF and DFDC benchmarks, with applications in cybersecurity, digital forensics and content verification.</p>
+          <div class="metrics">
+            <div class="metric"><b data-count="92.3" data-dec="1" data-suffix="%">0</b><span>Accuracy</span></div>
+            <div class="metric"><b data-count="91.7" data-dec="1" data-suffix="%">0</b><span>Precision</span></div>
+            <div class="metric"><b data-count="93" data-dec="0" data-suffix="%">0</b><span>Recall</span></div>
+            <div class="metric"><b data-count="92.35" data-dec="2" data-suffix="%">0</b><span>F1-score</span></div>
+          </div>
+          <div class="tags"><span>FaceForensics++</span><span>Celeb-DF</span><span>DFDC</span><span>CNN</span><span>Hybrid ML</span></div>
+          <div class="cta"><a class="btn primary" href="https://ijrpr.com/uploads/V6ISSUE6/IJRPR48717.pdf" target="_blank" rel="noopener">Read the paper <span>↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="sec-head reveal" data-n="05"><span class="eyebrow">// Skills</span><h2>My <span class="grad">toolkit</span></h2></header>
+        <div class="skill-grid">
+          <article class="glass pad skill tilt reveal"><h3><i>⌨️</i> Programming &amp; Software</h3><div class="chips"><span>Python</span><span>Java</span><span>Swift</span><span>C/C++</span><span>JavaScript</span><span>HTML5</span><span>CSS</span><span>React.js</span><span>Node.js</span><span>Express.js</span></div></article>
+          <article class="glass pad skill tilt reveal"><h3><i>🧠</i> AI &amp; Machine Learning</h3><div class="chips"><span>Machine Learning</span><span>Deep Learning</span><span>CNNs</span><span>TensorFlow</span><span>OpenCV</span><span>NumPy</span><span>Pandas</span><span>scikit-learn</span></div></article>
+          <article class="glass pad skill tilt reveal"><h3><i>📊</i> Databases &amp; Analytics</h3><div class="chips"><span>SQL</span><span>MySQL</span><span>MongoDB</span><span>DBMS</span><span>Power BI</span><span>Business Intelligence</span><span>Statistical Analysis</span></div></article>
+          <article class="glass pad skill tilt reveal"><h3><i>🧩</i> CS &amp; Systems</h3><div class="chips"><span>Data Structures</span><span>OOP</span><span>REST APIs</span><span>SDK Integration</span><span>Linux</span><span>Cloud Computing</span><span>Git</span><span>GitHub</span></div></article>
+          <article class="glass pad skill tilt reveal"><h3><i>🔐</i> Cybersecurity &amp; Research</h3><div class="chips"><span>Information Security</span><span>Ethical Hacking</span><span>Digital Forensics</span><span>Research Methods</span></div></article>
+          <article class="glass pad skill tilt reveal"><h3><i>🔌</i> CleverTap SDK Platforms</h3><div class="chips"><span>Android</span><span>iOS</span><span>Web</span><span>React Native</span><span>Flutter</span><span>Cordova</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="sec-head reveal" data-n="06"><span class="eyebrow">// Education</span><h2>Learning <span class="grad">path</span></h2></header>
+        <div class="edu-grid">
+          <article class="glass pad edu reveal">
+            <span class="date">2023 — 2025</span>
+            <h3>Master of Computer Applications</h3>
+            <p class="org">MET Institute of Computer Science · University of Mumbai</p>
+            <div class="grade"><b>9.28</b><span>/10 CGPI</span></div>
+            <p>AI &amp; ML, Big Data Analytics, Distributed Systems &amp; Cloud, Information Security, Ethical Hacking, Digital Forensics. Applied YOLOv3 and CNN facial recognition, and researched deepfake detection.</p>
+            <ul class="ticks"><li>98.09 percentile in the MAH-MCA-CET entrance exam</li><li>Top five students in the programme</li></ul>
+          </article>
+          <article class="glass pad edu reveal">
+            <span class="date">2020 — 2023</span>
+            <h3>B.Sc. Information Technology</h3>
+            <p class="org">Patkar-Varde College · University of Mumbai</p>
+            <div class="grade"><b>9.70</b><span>/10 CGPA</span></div>
+            <p>Discrete &amp; Applied Mathematics, Python, Data Structures, DBMS, AI, Operating Systems, Networks, Business Intelligence. Built a CNN lung-cancer detection project and ran UI/UX workshops.</p>
+            <ul class="ticks"><li>Top four students in the programme</li></ul>
+          </article>
+        </div>
+        <p class="small-note reveal">Earlier: Higher Secondary (Science) — Thakur College of Science and Commerce, 2018–2020 · Secondary School — Swami Vivekanand International School.</p>
+
+        <h3 class="sub-h reveal">Certifications &amp; recognition</h3>
+        <div class="cert-grid">
+          <article class="glass pad cert tilt reveal"><span class="badge">AWS Academy</span><h4>Machine Learning Foundations</h4><p>Supervised &amp; unsupervised learning, preprocessing, model training and evaluation; AWS services for ML.</p></article>
+          <article class="glass pad cert tilt reveal"><span class="badge">Google · Coursera</span><h4>Google AI Professional Certificate</h4><p>Prompt engineering, AI-assisted research, data analysis and responsible use of AI tools.</p></article>
+          <article class="glass pad cert tilt reveal"><span class="badge">AWS Academy</span><h4>Cloud Foundations</h4><p>Compute, storage, networking, databases, security and cloud architecture fundamentals.</p></article>
+          <article class="glass pad cert tilt reveal"><span class="badge gold">Award</span><h4>17th Aavishkar Research Convention</h4><p>Presented “UI Tech” at the Zonal Round, organised by the University of Mumbai (Dec 2022), guided by Dr. Janhavi Raut.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact glass reveal">
+          <span class="eyebrow">// Contact</span>
+          <h2>Let's build something <span class="grad">intelligent</span></h2>
+          <p>Open to conversations about AI/ML, SDK integrations and research collaborations.</p>
+          <div class="cta center">
+            <a class="btn primary" href="mailto:mrunmayi.shinde2602@gmail.com">✉ mrunmayi.shinde2602@gmail.com</a>
+            <button class="btn ghost" id="copy">Copy email</button>
+            <a class="btn ghost" href="https://github.com/MrunmayiS2600" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Mrunmayi Shinde · Designed &amp; built with glass, gradients and a little neural magic. · <a href="#home">Back to top ↑</a></p>
+  </footer>
+
+  <!-- AI ASSISTANT -->
+  <button class="ai-fab glass" id="aiFab" aria-label="Ask my AI assistant" aria-expanded="false"><span class="spark">✦</span> Ask my AI</button>
+  <section class="ai glass" id="ai" aria-label="AI assistant" hidden>
+    <header><div><b>✦ Mrunmayi's AI</b><small>Offline demo · answers come from my CV</small></div><button class="icon-btn" id="aiClose" aria-label="Close assistant">✕</button></header>
+    <div class="ai-log" id="aiLog" aria-live="polite"></div>
+    <div class="ai-sugg" id="aiSugg"></div>
+    <form class="ai-form" id="aiForm"><input id="aiInput" type="text" placeholder="Ask about my work, skills, research…" autocomplete="off" aria-label="Your question"><button class="btn primary" type="submit">Send</button></form>
+  </section>
+
+  <div class="overlay lightbox" id="lb" hidden role="dialog" aria-label="Screenshot"><button class="icon-btn" id="lbClose" aria-label="Close">✕</button><img id="lbImg" alt=""></div>
+
+  <div class="overlay cmdk" id="cmdk" hidden role="dialog" aria-label="Command palette">
+    <div class="cmdk-box glass">
+      <input id="cmdkInput" type="text" placeholder="Type a command or search…" autocomplete="off" aria-label="Command search">
+      <div class="cmdk-list" id="cmdkList"></div>
+      <div class="cmdk-foot">↑↓ navigate · ↵ select · esc close</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
