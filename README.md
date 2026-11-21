@@ -4,7 +4,7 @@
 
 A glassmorphism, AI-flavoured personal site built with plain HTML, CSS and JavaScript.
 
-**🌐 Live: https://mrunmayis2600.github.io/Portfolio/**
+**🌐 Live: https://mrunmayishinde26.github.io/Portfolio/**
 
 </div>
 
